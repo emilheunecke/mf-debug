@@ -1,0 +1,41 @@
+{
+  "name": "slagtstra_nav",
+  "version": "1.0.1",
+  "scripts": {
+    "build": "webpack --mode production",
+    "build:dev": "webpack --mode development",
+    "build:start": "cd dist && PORT=3001 npx serve",
+    "start": "webpack serve --open --mode development",
+    "start:live": "webpack serve --open --mode development --liveReload",
+    "docker:build": "docker build . -t slagtstra_nav",
+    "docker:run": "docker run -p 3001:3001 slagtstra_nav"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Jack Herrington",
+    "email": "jherr@pobox.com"
+  },
+  "devDependencies": {
+    "@babel/core": "7.13.15",
+    "@babel/plugin-transform-runtime": "^7.13.15",
+    "@babel/preset-env": "^7.13.15",
+    "@babel/preset-react": "7.13.13",
+    "@babel/preset-typescript": "^7.13.0",
+    "@types/react": "^17.0.3",
+    "@types/react-dom": "^17.0.3",
+    "@webpack-cli/serve": "^1.3.1",
+    "babel-loader": "8.2.2",
+    "css-loader": "^5.2.1",
+    "html-webpack-plugin": "^5.3.1",
+    "style-loader": "2.0.0",
+    "typescript": "^4.2.4",
+    "webpack": "5.31.2",
+    "webpack-cli": "4.6.0",
+    "webpack-dev-server": "3.11.2"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.13.10",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  }
+}
