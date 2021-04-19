@@ -42,7 +42,9 @@ module.exports = {
     new ModuleFederationPlugin({
       name: "slagtstra_home",
       filename: "remoteEntry.js",
-      remotes: {},
+      remotes: {
+        slagtstra_nav: "slagtstra_nav@http://localhost:3001/remoteEntry.js",
+        },
       exposes: {},
       shared: {
         ...deps,
